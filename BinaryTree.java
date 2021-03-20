@@ -106,7 +106,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 	   {
 		   postorderTraverse(node.getLeftChild());
 		   postorderTraverse(node.getRightChild());
-		   System.out.println(node.getData() + " ");
+		   System.out.print(node.getData() + " ");
 	   }
    }
  
@@ -114,8 +114,9 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse_callBinaryNodeMethod()
    {
-	   
+	   postorderTraverse_binaryNodeMethod(root);
    }
+   
    
    /** -------------------------------------------------------------------- */
    /** Task 2: Implement the 2 methods
