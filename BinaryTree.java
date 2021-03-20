@@ -106,7 +106,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 	   {
 		   postorderTraverse(node.getLeftChild());
 		   postorderTraverse(node.getRightChild());
-		   System.out.println(node.getData());
+		   System.out.println(node.getData() + " ");
 	   }
    }
  
@@ -138,8 +138,11 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    {
       int height = 0;
       if (node != null)
-         height = 1 + Math.max(getHeight(node.getLeftChild()),
-                               getHeight(node.getRightChild()));
+      {
+    	  height = 1 + Math.max(getHeight(node.getLeftChild()),
+                  getHeight(node.getRightChild()));
+      }
+         
       return height;
    } 
    
