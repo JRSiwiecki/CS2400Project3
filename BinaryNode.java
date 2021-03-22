@@ -1,3 +1,9 @@
+/**
+ * Represents a BinaryNode object of the trees.
+ * @author Joseph
+ *
+ * @param <T> Generic data type.
+ */
 public class BinaryNode<T>
 {
    private T             data;
