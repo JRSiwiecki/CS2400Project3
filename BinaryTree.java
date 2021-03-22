@@ -114,7 +114,9 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse_callBinaryNodeMethod()
    {   
-	   postorderTraverse_binaryNodeMethod(root);
+	   // if i call postorderTraverse_binaryNodeMethod, this literally does not work
+	   // and i am unable to fix it, so this is how it will be. sorry!
+	   postorderTraverse(root);
    }
    
    
