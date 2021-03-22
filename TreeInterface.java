@@ -1,3 +1,9 @@
+/**
+ * Provides generic implentation of a tree.
+ * @author Joseph
+ *
+ * @param <T> Generic data type.
+ */
 public interface TreeInterface<T>
 {
    public T getRootData();
