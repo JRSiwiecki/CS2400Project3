@@ -10,8 +10,22 @@ import org.junit.jupiter.api.Test;
 class EdgeCases 
 {
 	@Test
-	void test() 
+	void EmptyTreeTest() 
 	{
-		fail("Not yet implemented");
+		BinaryTree<String> tree = new BinaryTree<>();
+		int height = tree.getHeight();
+		assertEquals(0, height);
+		
+		assertThrows(EmptyTreeException.class, () -> {tree.postorderTraverse(); });
+	}
+	
+	@Test
+	void UninitializedTreeTest()
+	{
+		BinaryTree<String> tree;
+		int height = tree.getHeight();
+		assertEquals(0, height);
+		
+		assertThrows(EmptyTreeException.class, () -> {tree.postorderTraverse(); });
 	}
 }
