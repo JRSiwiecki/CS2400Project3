@@ -1,3 +1,8 @@
+/**
+ * Empty tree exception class.
+ * @author Joseph
+ *
+ */
 public class EmptyTreeException extends RuntimeException
 {
 	public EmptyTreeException()
