@@ -13,19 +13,9 @@ class EdgeCases
 	void EmptyTreeTest() 
 	{
 		BinaryTree<String> tree = new BinaryTree<>();
-		int height = tree.getHeight();
-		assertEquals(0, height);
 		
+		assertThrows(EmptyTreeException.class, () -> {tree.getHeight(); });
 		assertThrows(EmptyTreeException.class, () -> {tree.postorderTraverse(); });
-	}
-	
-	@Test
-	void UninitializedTreeTest()
-	{
-		BinaryTree<String> tree;
-		int height = tree.getHeight();
-		assertEquals(0, height);
-		
-		assertThrows(EmptyTreeException.class, () -> {tree.postorderTraverse(); });
-	}
+		assertThrows(EmptyTreeException.class, () -> {tree.getNumberOfNodes(); });
+	}	
 }
