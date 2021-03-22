@@ -1,13 +1,14 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
 /**
  * JUnit test class for testing edge cases.
  * @author Joseph
  *
  */
-class EdgeCases 
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+public class EdgeCases 
 {
 	@Test
 	void EmptyTreeTest() 
