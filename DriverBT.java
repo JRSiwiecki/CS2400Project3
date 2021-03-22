@@ -1,3 +1,8 @@
+/**
+ * Driver class for testing methods.
+ * @author Joseph
+ *
+ */
 public class DriverBT 
 {
 	public static void main(String[] args)
