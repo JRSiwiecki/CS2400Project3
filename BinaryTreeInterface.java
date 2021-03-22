@@ -1,3 +1,9 @@
+/**
+ * Provides general layout for how a BinaryTree should be implemented.
+ * @author Joseph
+ *
+ * @param <T> Generic data type.
+ */
 public interface BinaryTreeInterface<T> extends TreeInterface<T>
 {
    /** Sets the data in the root of this binary tree.
