@@ -105,7 +105,12 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    /** A Recursive Method in the BinaryTree Class   
     * prints (using post-order traversal) all nodes in the subtree rooted at this node.*/
    private void postorderTraverse(BinaryNode<T> node)
-   {
+   {   
+	   if (isEmpty())
+	   {
+		   throw new EmptyTreeException();
+	   }
+	   
 	   // if the node exists, then take the postorder traversal of
 	   // its left child, right child, then print its own data
 	   if (node != null)
@@ -137,6 +142,11 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    @return  The height of the "whole" tree */
    public int getHeight()
    {
+	   if (isEmpty())
+	   {
+		   throw new EmptyTreeException();
+	   }
+	   
 	   return getHeight(root);
    } 
    
