@@ -1,3 +1,9 @@
+/**
+ * Represents a BinaryTree comprised of BinaryNodes.
+ * @author Joseph
+ *
+ * @param <T> Generic data type.
+ */
 public class BinaryTree<T> implements BinaryTreeInterface<T>
 {
    private BinaryNode<T> root;
