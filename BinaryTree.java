@@ -98,6 +98,11 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse()
    {
+	   if (isEmpty())
+	   {
+		   throw new EmptyTreeException();
+	   }
+	   
 	   // call on the private method
 	   postorderTraverse(root);
    }
@@ -105,12 +110,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    /** A Recursive Method in the BinaryTree Class   
     * prints (using post-order traversal) all nodes in the subtree rooted at this node.*/
    private void postorderTraverse(BinaryNode<T> node)
-   {   
-	   if (isEmpty())
-	   {
-		   throw new EmptyTreeException();
-	   }
-	   
+   {      
 	   // if the node exists, then take the postorder traversal of
 	   // its left child, right child, then print its own data
 	   if (node != null)
@@ -125,6 +125,11 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse_callBinaryNodeMethod()
    {   
+	   if (isEmpty())
+	   {
+		   throw new EmptyTreeException();
+	   }
+	   
 	   // if i call postorderTraverse_binaryNodeMethod, this literally does not work
 	   // and i am unable to fix it, so this is how it will be. sorry!
 	   postorderTraverse(root);
@@ -186,15 +191,20 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    @return  The number of nodes in the "whole" tree */
    public int getNumberOfNodes()
    {
-      return getNumberOfNodes(root);
+	   if (isEmpty())
+	   {
+		   throw new EmptyTreeException();
+	   }
+	   
+	   return getNumberOfNodes(root);
    } 
    
    /** A Recursive Method in the BinaryTree Class   
     * Counts the nodes in the subtree rooted at this node.
    @return  The number of nodes in the subtree rooted at this node. */
    private int getNumberOfNodes(BinaryNode<T> node)
-   {
-      if (node == null)
+   {   
+	   if (node == null)
       {
     	  return 0;
       }
