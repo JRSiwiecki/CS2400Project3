@@ -1,4 +1,4 @@
-class BinaryNode<T>
+public class BinaryNode<T>
 {
    private T             data;
    private BinaryNode<T> leftChild;  // Reference to left child
@@ -98,7 +98,7 @@ class BinaryNode<T>
          newRoot.setRightChild(rightChild.copy());
       
       return newRoot;
-   } // end copy
+   } 
 
    /** --------------------------------------------------------------------
     * Part of Task 1 */
@@ -129,7 +129,7 @@ class BinaryNode<T>
 	   }
 	   
 	   return height;
-   } // end getHeight
+   } 
    
    /** -------------------------------------------------------------------- */
    /** A Recursive Method in the BinaryNode Class  
@@ -144,6 +144,6 @@ class BinaryNode<T>
 	  if (rightChild != null)
 	     rightNumber = rightChild.getNumberOfNodes_binaryNodeMethod();
 	  return 1 + leftNumber + rightNumber;
-	} // end getNumberOfNodes
+	} 
 	
-} // end BinaryNode
+} 
